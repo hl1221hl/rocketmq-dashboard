@@ -174,7 +174,7 @@ public class ConsumerServiceImpl extends AbstractCommonService implements Consum
                 consumeStats = mqAdminExt.examineConsumeStats(consumerGroup);
             }
             catch (Exception e) {
-                logger.warn("examineConsumeStats exception to consumerGroup {}, response [{}]", consumerGroup, e.getMessage());
+//                logger.warn("examineConsumeStats exception to consumerGroup {}, response [{}]", consumerGroup, e.getMessage());
             }
 
             ConsumerConnection consumerConnection = null;
@@ -182,7 +182,7 @@ public class ConsumerServiceImpl extends AbstractCommonService implements Consum
                 consumerConnection = mqAdminExt.examineConsumerConnectionInfo(consumerGroup);
             }
             catch (Exception e) {
-                logger.warn("examineConsumeStats exception to consumerGroup {}, response [{}]", consumerGroup, e.getMessage());
+//                logger.warn("examineConsumeStats exception to consumerGroup {}, response [{}]", consumerGroup, e.getMessage());
             }
 
             groupConsumeInfo.setGroup(consumerGroup);

@@ -25,16 +25,16 @@
 
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${user.home}/logs/dashboardlogs/rocketmq-dashboard.log</file>
+		<file>logs/dashboardlogs/rocketmq-dashboard.log</file>
 		<append>true</append>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${user.home}/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log
+			<fileNamePattern>logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>104857600</maxFileSize>
 			</timeBasedFileNamingAndTriggeringPolicy>
-			<MaxHistory>10</MaxHistory>
+			<MaxHistory>1</MaxHistory>
 		</rollingPolicy>
 		<encoder>
             <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %p %t - %m%n</pattern>
